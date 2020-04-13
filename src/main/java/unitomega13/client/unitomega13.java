@@ -4,15 +4,25 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Grid;
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.user.client.ui.HasVerticalAlignment;
+import com.google.gwt.user.client.ui.RootPanel;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
 
 public class unitomega13 implements EntryPoint {
 
     private int numberOfElements;
     private Random random = new Random();
-    private Button button;
     private Grid grid;
     private boolean pushButton = false;
     private List<Integer> numbersList = new ArrayList<>();
@@ -102,6 +112,7 @@ public class unitomega13 implements EntryPoint {
                 rowNumber = index;
             }
             int number = numbersList.get(index);
+            Button button;
             grid.setWidget(rowNumber, columnNumber, button = new Button(String.valueOf(number),
                     (ClickHandler) event -> {
                 if (number <= 30) {

@@ -8,8 +8,4 @@
     <!-- Specify the app entry point class.                   -->
     <entry-point class='unitomega13.client.unitomega13'/>
 
-
-    <!-- Specify the app servlets.                   -->
-    <servlet path='/unitomega13Service' class='unitomega13.server.unitomega13ServiceImpl'/>
-
 </module>
