@@ -1,0 +1,20 @@
+/** Add css rules here for your application. */
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gwt-Green-Button {
+    color: white;
+    background-color:green;
+}
+
+.gwt-Blue-Button {
+    color: white;
+    background-color:blue;
+}
+body, td, a, div, .p {
+    font-family: arial, sans-serif;
+}
