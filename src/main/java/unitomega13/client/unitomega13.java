@@ -11,6 +11,8 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.RootPanel;
 
 import java.util.ArrayList;
@@ -39,6 +41,9 @@ public class unitomega13 implements EntryPoint {
         mainPanel.setVerticalAlignment(HasVerticalAlignment.ALIGN_MIDDLE);
         buttonPanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
         buttonPanel.setVerticalAlignment(HasVerticalAlignment.ALIGN_TOP);
+        Label lbl = new Label("How many numbers to display?");
+        lbl.getAutoHorizontalAlignment();
+        mainPanel.add(lbl);
         mainPanel.add(newSymbolTextBox);
         mainPanel.add(start);
         start.addStyleName("gwt-Blue-Button");
@@ -77,6 +82,7 @@ public class unitomega13 implements EntryPoint {
                     buttonPanel.add(sort);
                     buttonPanel.add(reset);
                     numbers.add(buttonPanel);
+
                     RootPanel.get("frame1").add(numbers);
                     changeFrame(numberOfElements);
                 }else if (numberOfElements <= 0 || numberOfElements > 1000){
